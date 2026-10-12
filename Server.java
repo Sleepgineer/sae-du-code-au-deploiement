@@ -1,5 +1,6 @@
 // Serveur RMI
 
+import java.rmi.*;
 import java.rmi.registry.*;
 
 public class Server {
@@ -8,5 +9,5 @@ public class Server {
         LocateRegistry.createRegistry(1099);
         Naming.rebind("rmi://localhost/Hi", objet);
         System.out.println("Le serveur est prêt.");
-    };
-};
+    }
+}
