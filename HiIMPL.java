@@ -1,3 +1,5 @@
+// Implémentation de l'objet
+
 import java.rmi.server.*;
 import java.rmi.*;
 
