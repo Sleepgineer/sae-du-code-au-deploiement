@@ -1,4 +1,13 @@
-# sae-du-code-au-deploiement
-Répertoire contenant les travaux effectués dans le cadre de la SAÉ "Du code au déploiement" - INFO2A
+---
 
-Pour le moment, ce répertoire ne contient que des fichiers Java afin de tester le mécanisme de RMI. Ce mécanisme permet à des objets Java s'exécutant sur une JVM d'invoquer des méthodes sur d'autres JVM.
+Ce répertoire contient les travaux effectués dans le cadre du cours "Du code au déploiement", enseigné par Samir YOUCEF. 
+
+Ce répertoire est séparé en deux parties :
+- RMI
+- SOAP
+
+Plus de détails sont disponibles dans chaque sous-répertoire.
+
+---
+
+Dernière mise à jour : 15/10/2026
