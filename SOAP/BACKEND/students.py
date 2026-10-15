@@ -44,6 +44,26 @@ class StudentService(ServiceBase):
         etudiant = {"id": s_id, "name": nom, "age": a}
         students.append(etudiant)
 
+    @rpc(Integer)
+    def remove_student(ctx, id):
+        """
+        Supprime un étudiant à partir de son id
+        """
+        for s in students:
+            if s["id"] == id:
+                students.remove(s)
+
+    @rpc(Integer, Unicode, Integer)
+    def update_student(ctx, id, nom, age):
+        """
+        Modifie le nom et l'âge d'un étudiant
+        """
+        for s in students:
+            if s["id"] == id:
+                s["name"] = nom
+                s["age"] = age
+
+
 # Création de l'application Spyne
 application = Application(
     [StudentService],
