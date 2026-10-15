@@ -25,6 +25,25 @@ class StudentService(ServiceBase):
         # Convertir le dictionnaire en Student
         return [Student(**s) for s in students]
 
+    @rpc(Integer, _returns=Student)
+    def get_student(ctx, id):
+        """
+        Renvoie un étudiant à partir de son id
+        """
+        for s in students:
+            if s["id"] == id:
+                return Student(**s)
+        return None
+
+    @rpc(Unicode, Integer)
+    def add_student(ctx, nom, a):
+        """
+        Ajoute un nouvel étudiant
+        """
+        s_id = max((s["id"] for s in students), default=0) + 1
+        etudiant = {"id": s_id, "name": nom, "age": a}
+        students.append(etudiant)
+
 # Création de l'application Spyne
 application = Application(
     [StudentService],
