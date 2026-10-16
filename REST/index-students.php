@@ -1,5 +1,6 @@
 <?php
-$url = "http://localhost:5001/students";  // URL de notre API REST (écrite en Python)
+require_once('config/config.php');
+$url = API_BASE_URL . "/students";  // construction de l'URL à partir de la config
 $response = file_get_contents($url);  // récupération du contenu JSON (méthode GET)
 
 echo "Réponse JSON :";
