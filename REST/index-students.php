@@ -1,14 +1,9 @@
 <?php
+// Dépendances
 require_once('config/config.php');
-$url = API_BASE_URL . "/students";  // construction de l'URL à partir de la config
-$response = file_get_contents($url);  // récupération du contenu JSON (méthode GET)
+require_once('services/ServiceStudent.php');
 
-echo "Réponse JSON :";
-echo "<pre>";
-echo $response; // Affichage de la réponse (JSON brut, non exploitable par le PHP)
-echo "</pre>";
-
-$students = json_decode($response, true); // Décode le JSON
+$students = ServiceStudent::getAllStudents();
 
 echo "Réponse sous forme de tableau associatif :";
 echo "<pre>";

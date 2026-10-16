@@ -8,3 +8,6 @@ la sérialisation de listes ou d'objets.
 Cette API REST reprend le même exemple que celui utilisé dans le répertoire SOAP..
 
 Un premier exemple d'interopérabilité se trouve dans le fichier index-students.php qui fait appel à l'API REST écrite en Python.
+Un dossier config et services sont également à disposition pour séparer les usages :
+- config : configuration centralisée pour éviter de modifier l'URL plusieurs fois (ou d'autres paramètres) en cas de changement
+- services : décrit les services réalisés sous forme de classes
