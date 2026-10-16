@@ -13,3 +13,4 @@ Différents dossiers sont également à disposition pour séparer les usages et 
 - config : configuration centralisée pour éviter de modifier l'URL plusieurs fois (ou d'autres paramètres) en cas de changement
 - services : décrit les services réalisés sous forme de classes
 - views : contient la logique HTML et l'affichage
+- assets : contient le CSS (feuille de style)
